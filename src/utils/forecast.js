@@ -13,7 +13,7 @@ const foreCast = (latitude, longitude, callback) => {
 
         } else {
             callback(undefined, {
-                Description: body.current.weather_descriptions[0],
+                Description: body.current.weather_descriptions[0] + ",Temp : " + body.current.temperature + ", Humidity " + body.current.humidity + "%",
                 temp: body.current.temperature,
                 feel_temp: body.current.feelslike
             })
